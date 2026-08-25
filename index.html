@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CommunityConnect - connect people with the right authority, organization and community support.">
+  <title>CommunityConnect | Report. Connect. Resolve.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+  rel="stylesheet" 
+  integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+  crossorigin="anonymous">
+</head>
+<body>
+  <div class="announcement">
+    <span class="pulse-dot"></span>
+    <span>CommunityConnect Prototype</span>
+    <span class="announcement-divider"></span>
+    <span>One platform for Education, Healthcare & Civic Problems</span>
+  </div>
+
+  <header class="navbar">
+    <a class="brand" href="#home" aria-label="CommunityConnect home">
+      <span class="brand-mark"><span></span><span></span><span></span></span>
+      <span>Community<span>Connect</span></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#explore">Explore</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#cases">Nearby cases</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn btn-ghost" id="loginBtn">Sign in</button>
+      <button class="btn btn-primary" id="navReportBtn">Report a problem <span>↗</span></button>
+      <button class="mobile-menu" id="mobileMenuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-icon">✦</span> A bridge between people and solutions</div>
+        <h1>Problems deserve<br><em>solutions,</em> not silence.</h1>
+        <p class="hero-text">
+          Report a problem, find the right authority or organization, track what happens next,
+          and let your community support issues that matter.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-large" id="heroReportBtn">Report a problem <span>→</span></button>
+          <a class="btn btn-soft btn-large" href="#explore">Find help <span>⌕</span></a>
+        </div>
+
+        <div class="hero-note">
+          <span class="check">✓</span>
+          <span>Education</span>
+          <span class="dot-separator">•</span>
+          <span>Healthcare</span>
+          <span class="dot-separator">•</span>
+          <span>Civic problems</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="dashboard-card">
+          <div class="dashboard-top">
+            <div>
+              <span class="mini-label">LIVE CASE OVERVIEW</span>
+              <h3>Community pulse</h3>
+            </div>
+            <span class="status-pill green"><i></i> Active</span>
+          </div>
+
+          <div class="mini-map">
+            <div class="map-grid"></div>
+            <span class="map-road road-a"></span>
+            <span class="map-road road-b"></span>
+            <span class="map-road road-c"></span>
+            <button class="map-pin pin-1" title="Pothole">●</button>
+            <button class="map-pin pin-2" title="Streetlight">●</button>
+            <button class="map-pin pin-3" title="Water issue">●</button>
+            <div class="map-location">●  Your area</div>
+          </div>
+
+          <div class="case-summary">
+            <div><strong>128</strong><span>Total reports</span></div>
+            <div><strong>94</strong><span>Resolved</span></div>
+            <div><strong>21</strong><span>In progress</span></div>
+          </div>
+
+          <div class="featured-case">
+            <div class="case-icon civic">⚠</div>
+            <div class="case-info">
+              <strong>Large pothole near ABC Road</strong>
+              <span>14 citizens supporting • Authority notified</span>
+            </div>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+
+        <div class="floating-card float-one">
+          <span class="float-icon education">🎓</span>
+          <div><b>Education</b><small>8 active cases</small></div>
+        </div>
+        <div class="floating-card float-two">
+          <span class="float-icon health">+</span>
+          <div><b>Healthcare</b><small>3 critical cases</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+      <div class="stat"><strong>03</strong><span>Focus areas</span></div>
+      <div class="stat"><strong>01</strong><span>Unified case flow</span></div>
+      <div class="stat"><strong>24/7</strong><span>Case visibility</span></div>
+      <div class="stat"><strong>∞</strong><span>Community voices</span></div>
+    </section>
+
+    <section class="section explore-section" id="explore">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">WHAT CAN WE HELP WITH?</span>
+          <h2>Start with the problem.</h2>
+        </div>
+        <p>Different problems need different routes. We keep the reporting simple and guide the case from there.</p>
+      </div>
+
+      <div class="category-grid">
+        <button class="category-card education" data-category="Education">
+          <div class="category-top"><span class="category-icon">🎓</span><span class="category-arrow">↗</span></div>
+          <span class="category-number">01</span>
+          <h3>Education</h3>
+          <p>Fee assistance, scholarships, study materials, digital access and educational infrastructure.</p>
+          <span class="category-link">Get education help <b>→</b></span>
+        </button>
+
+        <button class="category-card healthcare" data-category="Healthcare">
+          <div class="category-top"><span class="category-icon">✚</span><span class="category-arrow">↗</span></div>
+          <span class="category-number">02</span>
+          <h3>Healthcare</h3>
+          <p>Oxygen, beds, medicines, ambulances, blood, medical equipment and hospital infrastructure.</p>
+          <span class="category-link">Report healthcare issue <b>→</b></span>
+        </button>
+
+        <button class="category-card civic" data-category="Civic Problems">
+          <div class="category-top"><span class="category-icon">⌂</span><span class="category-arrow">↗</span></div>
+          <span class="category-number">03</span>
+          <h3>Civic Problems</h3>
+          <p>Potholes, streetlights, garbage, drainage, water leakage and damaged public facilities.</p>
+          <span class="category-link">Report nearby problem <b>→</b></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section workflow-section" id="how-it-works">
+      <div class="workflow-intro">
+        <span class="section-kicker">THE COMMON LAYER</span>
+        <h2>From a report to a resolution.</h2>
+        <p>Our three focus areas share one transparent case-management workflow.</p>
+      </div>
+
+      <div class="workflow">
+        <div class="workflow-line"></div>
+        <article class="step">
+          <span class="step-num">01</span><span class="step-icon">✎</span>
+          <h3>Report</h3><p>Tell us what happened and add useful evidence.</p>
+        </article>
+        <article class="step">
+          <span class="step-num">02</span><span class="step-icon">⌖</span>
+          <h3>Categorize & locate</h3><p>Select the problem type and where it is happening.</p>
+        </article>
+        <article class="step">
+          <span class="step-num">03</span><span class="step-icon">⇢</span>
+          <h3>Route</h3><p>Match the case to a relevant authority or organization.</p>
+        </article>
+        <article class="step">
+          <span class="step-num">04</span><span class="step-icon">↻</span>
+          <h3>Track & escalate</h3><p>Follow progress and escalate when the first route does not resolve it.</p>
+        </article>
+        <article class="step">
+          <span class="step-num">05</span><span class="step-icon">✓</span>
+          <h3>Resolve & review</h3><p>Close the case and leave feedback after resolution.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section nearby-section" id="cases">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">AROUND YOU</span>
+          <h2>Nearby problems.</h2>
+        </div>
+        <div class="case-controls">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="civic">Civic</button>
+          <button class="filter" data-filter="healthcare">Healthcare</button>
+          <button class="filter" data-filter="education">Education</button>
+        </div>
+      </div>
+
+      <div class="cases-layout">
+        <div class="cases-list" id="casesList">
+          <article class="case-card" data-type="civic">
+            <div class="case-card-icon civic-bg">⚠</div>
+            <div class="case-main">
+              <div class="case-title-row"><h3>Large pothole near ABC Road</h3><span class="priority high">High</span></div>
+              <p>Road surface is damaged and vehicles are having difficulty passing.</p>
+              <div class="case-meta"><span>⌖ 0.8 km away</span><span>👥 14 supporters</span><span>● Authority notified</span></div>
+            </div>
+            <button class="case-view" data-case="CIV-1024">View →</button>
+          </article>
+
+          <article class="case-card" data-type="civic">
+            <div class="case-card-icon light-bg">☼</div>
+            <div class="case-main">
+              <div class="case-title-row"><h3>Broken streetlight at Sector 7</h3><span class="priority medium">Medium</span></div>
+              <p>Street remains unlit after sunset, affecting pedestrians.</p>
+              <div class="case-meta"><span>⌖ 1.2 km away</span><span>👥 6 supporters</span><span>● Reported</span></div>
+            </div>
+            <button class="case-view" data-case="CIV-1019">View →</button>
+          </article>
+
+          <article class="case-card" data-type="healthcare">
+            <div class="case-card-icon health-bg">✚</div>
+            <div class="case-main">
+              <div class="case-title-row"><h3>Hospital oxygen shortage</h3><span class="priority critical">Critical</span></div>
+              <p>Required: 50 cylinders • Available: 28 • Shortage: 22.</p>
+              <div class="case-meta"><span>⌖ 2.4 km away</span><span>Health authority</span><span>● Escalated</span></div>
+            </div>
+            <button class="case-view" data-case="HLT-0042">View →</button>
+          </article>
+
+          <article class="case-card" data-type="education">
+            <div class="case-card-icon edu-bg">🎓</div>
+            <div class="case-main">
+              <div class="case-title-row"><h3>Student fee assistance request</h3><span class="priority medium">Medium</span></div>
+              <p>Student needs help accessing available education assistance.</p>
+              <div class="case-meta"><span>⌖ 3.1 km away</span><span>Education authority</span><span>● In review</span></div>
+            </div>
+            <button class="case-view" data-case="EDU-0087">View →</button>
+          </article>
+        </div>
+
+        <aside class="map-panel">
+          <div class="map-panel-top"><strong>Nearby map</strong><button id="locateBtn">⌖ Use my location</button></div>
+          <div class="big-map">
+            <div class="map-grid"></div>
+            <span class="map-road br-a"></span><span class="map-road br-b"></span><span class="map-road br-c"></span>
+            <span class="big-pin p-a">●<small>CIV</small></span>
+            <span class="big-pin p-b">●<small>CIV</small></span>
+            <span class="big-pin p-c">●<small>HLT</small></span>
+            <span class="big-pin p-d">●<small>EDU</small></span>
+            <div class="you-are-here">● You are here</div>
+          </div>
+          <div class="map-legend"><span><i class="legend-dot civic-dot"></i>Civic</span><span><i class="legend-dot health-dot"></i>Healthcare</span><span><i class="legend-dot edu-dot"></i>Education</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section community-section">
+      <div class="community-card">
+        <div class="community-copy">
+          <span class="section-kicker">ONE PROBLEM. MANY VOICES.</span>
+          <h2>Support a case instead of creating another one.</h2>
+          <p>If 20 people face the same pothole, they shouldn't have to create 20 complaints. A shared case can show the authority how many people are affected.</p>
+          <button class="btn btn-dark" id="communityBtn">Explore community cases →</button>
+        </div>
+        <div class="support-visual">
+          <div class="support-ring"><strong>14</strong><span>supporters</span></div>
+          <div class="support-person person-1">A</div>
+          <div class="support-person person-2">R</div>
+          <div class="support-person person-3">S</div>
+          <div class="support-person person-4">K</div>
+          <div class="support-person person-5">+</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section trust-section" id="about">
+      <div class="trust-copy">
+        <span class="section-kicker">DESIGNED AROUND RESEARCH</span>
+        <h2>Simple for citizens.<br><span>Structured for action.</span></h2>
+        <p>Research on grievance redressal, civic reporting and crowdsourcing repeatedly points to the importance of clear routing, case tracking, transparency, privacy, community participation and accessible reporting.</p>
+      </div>
+      <div class="trust-points">
+        <div><span>01</span><b>Transparent cases</b><small>Every report gets a trackable case journey.</small></div>
+        <div><span>02</span><b>Authority first</b><small>Route the problem to the relevant public authority where applicable.</small></div>
+        <div><span>03</span><b>Escalate when needed</b><small>Unresolved cases can move to an appropriate next route.</small></div>
+        <div><span>04</span><b>Feedback after resolution</b><small>Reviews are linked to the case outcome.</small></div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div>
+        <span class="section-kicker">READY TO MAKE A DIFFERENCE?</span>
+        <h2>See a problem?<br><em>Start the case.</em></h2>
+      </div>
+      <button class="btn btn-white btn-large" id="bottomReportBtn">Report a problem →</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand"><span class="brand-mark"><span></span><span></span><span></span></span><b>CommunityConnect</b></div>
+    <p>Report. Connect. Resolve.</p>
+    <span class="footer-note">Mini Project Prototype • Frontend Demo</span>
+  </footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" id="reportModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div class="modal-head">
+        <span class="modal-icon">✦</span>
+        <div><span class="section-kicker">NEW CASE</span><h2 id="modalTitle">Report a problem</h2></div>
+      </div>
+
+      <form id="reportForm">
+        <label>What area does this belong to?
+          <select id="reportCategory" required>
+            <option value="">Choose a category</option>
+            <option>Education</option>
+            <option>Healthcare</option>
+            <option>Civic Problems</option>
+          </select>
+        </label>
+
+        <label>What is the problem?
+          <input type="text" id="reportTitle" placeholder="e.g. Broken streetlight near Sector 7" required>
+        </label>
+
+        <div class="form-row">
+          <label>Location
+            <input type="text" id="reportLocation" placeholder="Area / landmark" required>
+          </label>
+          <label>Priority
+            <select id="reportPriority">
+              <option>Medium</option>
+              <option>Low</option>
+              <option>High</option>
+              <option>Critical</option>
+            </select>
+          </label>
+        </div>
+
+        <label>Description
+          <textarea id="reportDescription" rows="4" placeholder="Tell us what is happening..."></textarea>
+        </label>
+
+        <label class="upload-box">
+          <input type="file" id="reportPhoto" accept="image/*">
+          <span>📷</span>
+          <b>Add a photo</b>
+          <small>Optional • JPG, PNG up to 5 MB</small>
+        </label>
+
+        <button class="btn btn-primary btn-large submit-report" type="submit">Create case <span>→</span></button>
+      </form>
+      <div class="success-state" id="successState">
+        <div class="success-icon">✓</div>
+        <span class="section-kicker">CASE CREATED</span>
+        <h2 id="successTitle">Your report is on its way.</h2>
+        <p>Your prototype case ID is <strong id="generatedCase">CIV-2048</strong>. You can use it to track the case.</p>
+        <button class="btn btn-dark" id="successClose">Back to CommunityConnect</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"><span>✓</span><p></p></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
