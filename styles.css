@@ -121,3 +121,21 @@ h1 em,h2 em{font-style:normal;color:var(--purple)}
   .case-card{align-items:flex-start}.case-meta{flex-wrap:wrap}.case-view{display:none}.form-row{grid-template-columns:1fr}.cta-section{margin:0 5vw 55px;padding:38px 28px;display:block}.cta-section h2{font-size:31px}.cta-section .btn{margin-top:25px;width:100%}
   .trust-points{grid-template-columns:1fr}.footer{padding:25px 5vw;flex-wrap:wrap}.footer-note{margin-left:0;width:100%}
 }
+
+.location-btn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px 12px;
+  background: #eeebff;
+  color: var(--purple);
+  border-radius: 11px;
+  font-size: 11px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.location-btn:hover {
+  background: var(--purple);
+  color: white;
+  transform: translateY(-1px);
+}
