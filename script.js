@@ -89,6 +89,37 @@ $$(".case-view").forEach(button => {
   });
 });
 
+$$(".support-btn").forEach(button => {
+  button.addEventListener("click", () => {
+
+    const caseCard = button.closest(".case-card");
+    const supportNumber = $(".support-number", caseCard);
+
+    let currentSupporters = Number(supportNumber.textContent);
+
+    if (button.classList.contains("supporting")) {
+
+      currentSupporters--;
+      supportNumber.textContent = currentSupporters;
+
+      button.classList.remove("supporting");
+      button.textContent = "Support ♡";
+
+      showToast("Your support was removed.");
+
+    } else {
+
+      currentSupporters++;
+      supportNumber.textContent = currentSupporters;
+
+      button.classList.add("supporting");
+      button.textContent = "Supporting ✓";
+
+      showToast("You are now supporting this case!");
+    }
+  });
+});
+
 $("#communityBtn").addEventListener("click", () => {
   document.querySelector("#cases").scrollIntoView({ behavior: "smooth" });
   setTimeout(() => {
