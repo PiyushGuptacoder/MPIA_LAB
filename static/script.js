@@ -6,6 +6,7 @@ const reportForm = $("#reportForm");
 const successState = $("#successState");
 const modalTitle = $("#modalTitle");
 const generatedCase = $("#generatedCase");
+const reportLocationBtn = $("#reportLocationBtn");
 
 function openReportModal(category = "") {
   modalBackdrop.classList.add("show");
@@ -138,3 +139,111 @@ function showToast(message) {
   clearTimeout(showToast.timer);
   showToast.timer = setTimeout(() => toast.classList.remove("show"), 3000);
 }
+
+reportLocationBtn.addEventListener("click", () => {
+
+  if (!navigator.geolocation) {
+    showToast("Geolocation is not supported by your browser.");
+    return;
+  }
+
+  reportLocationBtn.textContent = "⌛ Detecting location...";
+  reportLocationBtn.disabled = true;
+
+  navigator.geolocation.getCurrentPosition(
+
+    async position => {
+
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+
+      console.log("Latitude:", latitude);
+      console.log("Longitude:", longitude);
+
+      try {
+
+        const response = await fetch(
+          `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`
+        );
+
+        const data = await response.json();
+
+        console.log(data);
+
+        $("#reportLocation").value = data.display_name;
+
+        showToast("Location detected successfully!");
+
+      } catch (error) {
+
+        console.error(error);
+
+        $("#reportLocation").value =
+          `${latitude.toFixed(5)}, ${longitude.toFixed(5)}`;
+
+        showToast(
+          "Coordinates detected, but the address could not be loaded."
+        );
+
+      } finally {
+
+        reportLocationBtn.textContent =
+          "📍 Use my current location";
+
+        reportLocationBtn.disabled = false;
+
+      }
+
+    },
+
+    error => {
+
+      console.error(error);
+
+      let message = "Unable to detect your location.";
+
+      if (error.code === 1) {
+        message = "Location permission was denied.";
+      } else if (error.code === 2) {
+        message = "Location information is unavailable.";
+      } else if (error.code === 3) {
+        message = "Location request timed out.";
+      }
+
+      showToast(message);
+
+      reportLocationBtn.textContent =
+        "📍 Use my current location";
+
+      reportLocationBtn.disabled = false;
+
+    }
+
+  );
+
+});
+
+
+// Student Assistance Modal Logic
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all view buttons
+  const viewButtons = document.querySelectorAll(".case-view[data-case]");
+  const healthModal = document.getElementById("healthModal");
+  const closeHealth = document.querySelector(".case-close");
+
+  viewButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const caseId = btn.getAttribute("data-case");
+      if (caseId === "HLT-0042") {
+        healthModal.style.display = "block";
+      }
+    });
+  });
+
+  closeHealth.onclick = () => healthModal.style.display = "none";
+  window.onclick = (e) => {
+    if (e.target === healthModal) healthModal.style.display = "none";
+  };
+});
+
+

@@ -8,11 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-  rel="stylesheet" 
-  integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
-  crossorigin="anonymous">
+  <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
   <div class="announcement">
@@ -37,7 +33,12 @@
     </nav>
 
     <div class="nav-actions">
-      <button class="btn btn-ghost" id="loginBtn">Sign in</button>
+      {%if user%}
+      <p class="nav-user">Welcome, {{user}} </p>
+      <a href="{{ url_for('logout') }}"><button class="btn btn-ghost" id="loginBtn">Logout</button> </a>
+      {%else%}
+      <a href="{{ url_for('login') }}"><button class="btn btn-ghost" id="loginBtn">Sign in</button> </a>
+      {%endif%}
       <button class="btn btn-primary" id="navReportBtn">Report a problem <span>↗</span></button>
       <button class="mobile-menu" id="mobileMenuBtn" aria-label="Open menu">☰</button>
     </div>
@@ -229,6 +230,8 @@
             <button class="case-view" data-case="CIV-1019">View →</button>
           </article>
 
+          
+
           <article class="case-card" data-type="healthcare">
             <div class="case-card-icon health-bg">✚</div>
             <div class="case-main">
@@ -239,6 +242,21 @@
             <button class="case-view" data-case="HLT-0042">View →</button>
           </article>
 
+          <div id="healthModal" class="case-modal">
+            <div class="case-modal-content">
+              <span class="case-close">&times;</span>
+              <h2>Case Details: Hospital Oxygen Shortage</h2>
+              <p><strong>Case ID:</strong> HLT‑0042</p>
+              <p><strong>Status:</strong> Escalated</p>
+              <p><strong>Authority:</strong> Health Department</p>
+              <p><strong>Location:</strong> 2.4 km away</p>
+              <p><strong>Details:</strong> The hospital is facing a shortage of 22 oxygen cylinders. Immediate supply required to stabilize critical patients.</p>
+              <p><strong>Priority:</strong> Critical</p>
+            </div>
+          </div>
+
+
+
           <article class="case-card" data-type="education">
             <div class="case-card-icon edu-bg">🎓</div>
             <div class="case-main">
@@ -247,8 +265,23 @@
               <div class="case-meta"><span>⌖ 3.1 km away</span><span>Education authority</span><span>● In review</span></div>
             </div>
             <button class="case-view" data-case="EDU-0087">View →</button>
+            <button id="studentAssistBtn" class="case-view">Get Assistance →</button>
           </article>
+
+          <div id="assistModal" class="assist-modal">
+            <div class="assist-modal-content">
+              <span class="assist-close">&times;</span>
+              <h2>Student Assistance Form</h2>
+              <form method="POST" action="{{ url_for('student_assist') }}">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="query" placeholder="Describe your issue..." required></textarea>
+                <input type="submit" value="Submit Request">
+              </form>
+            </div>
+          </div>
         </div>
+
 
         <aside class="map-panel">
           <div class="map-panel-top"><strong>Nearby map</strong><button id="locateBtn">⌖ Use my location</button></div>
@@ -338,7 +371,20 @@
 
         <div class="form-row">
           <label>Location
-            <input type="text" id="reportLocation" placeholder="Area / landmark" required>
+            <input
+    type="text"
+    id="reportLocation"
+    placeholder="Area / landmark"
+    required
+  >
+
+  <button
+    type="button"
+    class="location-btn"
+    id="reportLocationBtn"
+  >
+    📍 Use my current location
+  </button>
           </label>
           <label>Priority
             <select id="reportPriority">
@@ -375,6 +421,6 @@
 
   <div class="toast" id="toast"><span>✓</span><p></p></div>
 
-  <script src="script.js"></script>
+  <script src="static/script.js"></script>
 </body>
 </html>
