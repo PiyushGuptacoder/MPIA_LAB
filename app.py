@@ -7,7 +7,7 @@ app.secret_key = "your_secret_key"   # session ke liye zaroori hai
 # Dummy user database (later tum ise real DB se replace kar sakte ho)
 users = {
     "admin": generate_password_hash("password123"),
-    "piyush": generate_password_hash("12345"),
+    "Piyush": generate_password_hash("12345"),
     "PiyushSingh": generate_password_hash("98765"),
 
 }

@@ -170,3 +170,88 @@ function showToast(message) {
   clearTimeout(showToast.timer);
   showToast.timer = setTimeout(() => toast.classList.remove("show"), 3000);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+ // healthcare
+  const viewBtn = document.querySelector(".case-view[data-case='HLT-0042']");
+  const healthModal = document.getElementById("healthModal");
+  const closeHealth = healthModal.querySelector(".case-close");
+  viewBtn.addEventListener("click", () => {
+    healthModal.style.display = "block";
+  });
+
+  closeHealth.addEventListener("click", () => {
+    healthModal.style.display = "none";
+  });
+ 
+  window.addEventListener("click", (e) => {
+    if (e.target === healthModal) {
+      healthModal.style.display = "none";
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Civic streetlight
+  const viewCivicBtn = document.querySelector(".case-view[data-case='CIV-1019']");
+  const civicModal = document.getElementById("civicModal");
+  const closeCivic = civicModal.querySelector(".case-close");
+
+  viewCivicBtn.addEventListener("click", () => {
+    civicModal.style.display = "block";
+  });
+
+  closeCivic.addEventListener("click", () => {
+    civicModal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === civicModal) {
+      civicModal.style.display = "none";
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Civic Pothole C
+  const viewPotholeBtn = document.querySelector(".case-view[data-case='CIV-1024']");
+  const civicModal1024 = document.getElementById("civicModal1024");
+  const closePothole = civicModal1024.querySelector(".case-close");
+
+  viewPotholeBtn.addEventListener("click", () => {
+    civicModal1024.style.display = "block";
+  });
+
+  closePothole.addEventListener("click", () => {
+    civicModal1024.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === civicModal1024) {
+      civicModal1024.style.display = "none";
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Education
+  const viewEduBtn = document.querySelector(".case-view[data-case='EDU-0087']");
+  const eduModal = document.getElementById("eduModal");
+  const closeEdu = eduModal.querySelector(".case-close");
+
+  viewEduBtn.addEventListener("click", () => {
+    eduModal.style.display = "block";
+  });
+
+  closeEdu.addEventListener("click", () => {
+    eduModal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === eduModal) {
+      eduModal.style.display = "none";
+    }
+  });
+});
+

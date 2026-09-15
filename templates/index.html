@@ -215,32 +215,57 @@
             <div class="case-main">
               <div class="case-title-row"><h3>Large pothole near ABC Road</h3><span class="priority high">High</span></div>
               <p>Road surface is damaged and vehicles are having difficulty passing.</p>
-             <div class="case-meta">
-    <span>⌖ 0.8 km away</span>
-    <span class="support-count">👥 <span class="support-number">14</span> supporters</span>
-    <span>● Authority notified</span>
-</div>
-            <div class="case-actions">
-    <button class="support-btn">Support ♡</button>
-    <button class="case-view" data-case="CIV-1024">View →</button>
-</div>
+            <div class="case-meta">
+              <span>⌖ 0.8 km away</span>
+              <span class="support-count">👥 <span class="support-number">14</span> supporters</span>
+              <span>● Authority notified</span>
+            </div>
+                        <div class="case-actions">
+                <button class="support-btn">Support ♡</button>
+                <button class="case-view" data-case="CIV-1024">View →</button>
+            </div>
           </article>
+          <div id="civicModal1024" class="case-modal">
+            <div class="case-modal-content">
+              <span class="case-close">&times;</span>
+              <h2>Case Details: Large Pothole near ABC Road</h2>
+              <p><strong>Case ID:</strong> CIV‑1024</p>
+              <p><strong>Status:</strong> Authority notified</p>
+              <p><strong>Location:</strong> 0.8 km away</p>
+              <p><strong>Supporters:</strong> 14 local residents</p>
+              <p><strong>Description:</strong> Road surface is severely damaged with a large pothole, making it difficult for vehicles to pass safely. Immediate repair is required to prevent accidents.</p>
+              <p><strong>Priority:</strong> High</p>
+            </div>
+          </div>
 
+          
           <article class="case-card" data-type="civic">
             <div class="case-card-icon light-bg">☼</div>
             <div class="case-main">
               <div class="case-title-row"><h3>Broken streetlight at Sector 7</h3><span class="priority medium">Medium</span></div>
               <p>Street remains unlit after sunset, affecting pedestrians.</p>
              <div class="case-meta">
-    <span>⌖ 1.2 km away</span>
-    <span class="support-count">👥 <span class="support-number">6</span> supporters</span>
-    <span>● Reported</span>
-</div>
-           <div class="case-actions">
-    <button class="support-btn">Support ♡</button>
-    <button class="case-view" data-case="CIV-1019">View →</button>
-</div>
+                <span>⌖ 1.2 km away</span>
+                <span class="support-count">👥 <span class="support-number">6</span> supporters</span>
+                <span>● Reported</span>
+            </div>
+            <div class="case-actions">
+                <button class="support-btn">Support ♡</button>
+                <button class="case-view" data-case="CIV-1019">View →</button>
+            </div>
           </article>
+          <div id="civicModal" class="case-modal">
+            <div class="case-modal-content">
+              <span class="case-close">&times;</span>
+              <h2>Case Details: Broken Streetlight at Sector 7</h2>
+              <p><strong>Case ID:</strong> CIV‑1019</p>
+              <p><strong>Status:</strong> Reported</p>
+              <p><strong>Location:</strong> Sector 7 (1.2 km away)</p>
+              <p><strong>Supporters:</strong> 6 local residents</p>
+              <p><strong>Description:</strong> Streetlight has been non‑functional for over a week, causing visibility issues and safety concerns for pedestrians after sunset.</p>
+              <p><strong>Priority:</strong> Medium</p>
+            </div>
+          </div>
 
           
 
@@ -250,14 +275,14 @@
               <div class="case-title-row"><h3>Hospital oxygen shortage</h3><span class="priority critical">Critical</span></div>
               <p>Required: 50 cylinders • Available: 28 • Shortage: 22.</p>
             <div class="case-meta">
-    <span>⌖ 2.4 km away</span>
-    <span class="support-count">👥 <span class="support-number">9</span> supporters</span>
-    <span>● Escalated</span>
-</div> 
-           <div class="case-actions">
-    <button class="support-btn">Support ♡</button>
-    <button class="case-view" data-case="HLT-0042">View →</button>
-</div>
+            <span>⌖ 2.4 km away</span>
+            <span class="support-count">👥 <span class="support-number">9</span> supporters</span>
+            <span>● Escalated</span>
+            </div> 
+            <div class="case-actions">
+                <button class="support-btn">Support ♡</button>
+                <button class="case-view" data-case="HLT-0042">View →</button>
+            </div>
           </article>
 
           <div id="healthModal" class="case-modal">
@@ -292,19 +317,18 @@
             </div>
           </article>
 
-          <div id="assistModal" class="assist-modal">
-            <div class="assist-modal-content">
-              <span class="assist-close">&times;</span>
-              <h2>Student Assistance Form</h2>
-              <form method="POST" action="{{ url_for('student_assist') }}">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="query" placeholder="Describe your issue..." required></textarea>
-                <input type="submit" value="Submit Request">
-              </form>
+          <div id="eduModal" class="case-modal">
+            <div class="case-modal-content">
+              <span class="case-close">&times;</span>
+              <h2>Case Details: Student Fee Assistance Request</h2>
+              <p><strong>Case ID:</strong> EDU‑0087</p>
+              <p><strong>Status:</strong> In review</p>
+              <p><strong>Location:</strong> 3.1 km away</p>
+              <p><strong>Supporters:</strong> 5 students</p>
+              <p><strong>Description:</strong> Student requires help accessing available education assistance programs and fee waivers.</p>
+              <p><strong>Priority:</strong> Medium</p>
             </div>
           </div>
-        </div>
 
 
         <aside class="map-panel">
