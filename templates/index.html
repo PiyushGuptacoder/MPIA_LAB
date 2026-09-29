@@ -210,6 +210,27 @@
 
       <div class="cases-layout">
         <div class="cases-list" id="casesList">
+          <!-- {% for case in cases %}
+          <article class="case-card" data-type="{{ case.category }}">
+            <div class="case-card-icon {{ case.category }}-bg">⚠</div>
+            <div class="case-main">
+              <div class="case-title-row">
+                <h3>{{ case.title }}</h3>
+                <span class="priority {{ case.priority|lower }}">{{ case.priority }}</span>
+              </div>
+              <p>{{ case.description }}</p>
+              <div class="case-meta">
+                <span>⌖ {{ case.location }}</span>
+                <span class="support-count">👥 {{ case.supporters }} supporters</span>
+                <span>● {{ case.status }}</span>
+              </div>
+              <div class="case-actions">
+                <button class="support-btn">Support ♡</button>
+                <button class="case-view" data-case="{{ case.id }}">View →</button>
+              </div>
+            </div>
+          </article>
+          {% endfor %} -->
           <article class="case-card" data-type="civic">
             <div class="case-card-icon civic-bg">⚠</div>
             <div class="case-main">

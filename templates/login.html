@@ -26,6 +26,7 @@
       <input type="text" name="username" placeholder="Username" required>
       <input type="password" name="password" placeholder="Password" required>
       <input type="submit" value="Login">
+      <p><a href="{{ url_for('register') }}">Don't have an account? Register here.</a></p>
     </form>
 
     {% with messages = get_flashed_messages(with_categories=true) %}

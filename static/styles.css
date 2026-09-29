@@ -287,3 +287,15 @@ h1 em,h2 em{font-style:normal;color:var(--purple)}
     background:var(--purple);
     color:#fff;
 }
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
