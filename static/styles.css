@@ -299,3 +299,34 @@ textarea {
   border-radius: 6px;
   font-size: 14px;
 }
+
+.flash-message {
+  position: fixed;
+  top: 80px;
+  right: 25px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  z-index: 9999;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.flash-message.success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.flash-message.danger {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.flash-message.warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.flash-message.info {
+  background: #dbeafe;
+  color: #1e40af;
+}
