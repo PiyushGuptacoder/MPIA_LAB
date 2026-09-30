@@ -255,3 +255,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+function useCurrentLocation() {
+    if (!navigator.geolocation) {
+        alert("Geolocation is not supported by your browser.");
+        return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+        function(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            const locationInput = document.getElementById("reportLocation");
+
+            if (locationInput) {
+                locationInput.value =
+                    `${latitude.toFixed(6)}, ${longitude.toFixed(6)}`;
+            }
+        },
+        function(error) {
+            alert("Unable to get your location. Please allow location access.");
+        }
+    );
+}
