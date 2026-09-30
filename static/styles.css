@@ -330,3 +330,39 @@ textarea {
   background: #dbeafe;
   color: #1e40af;
 }
+
+/* Dark Mode */
+.dark-mode-btn {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+body.dark-mode {
+    background: #111827;
+    color: #f9fafb;
+}
+
+body.dark-mode .navbar {
+    background: #111827;
+}
+
+body.dark-mode .nav-links a {
+    color: #f9fafb;
+}
+
+body.dark-mode .section {
+    background: #111827;
+}
+
+body.dark-mode .case-card {
+    background: #1f2937;
+    color: #f9fafb;
+}
+
+body.dark-mode .case-card p,
+body.dark-mode .case-meta {
+    color: #d1d5db;
+}
