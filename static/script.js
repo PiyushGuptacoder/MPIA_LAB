@@ -279,3 +279,23 @@ function useCurrentLocation() {
         }
     );
 }
+
+
+const caseSearch = document.getElementById("caseSearch");
+
+if (caseSearch) {
+    caseSearch.addEventListener("input", function () {
+        const searchText = this.value.toLowerCase();
+        const caseCards = document.querySelectorAll(".case-card");
+
+        caseCards.forEach(function (card) {
+            const cardText = card.textContent.toLowerCase();
+
+            if (cardText.includes(searchText)) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+}
